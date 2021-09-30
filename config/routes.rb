@@ -5,6 +5,9 @@ Rails.application.routes.draw do
       scope 'games' do
         get 'index', to: 'games#index'
         get 'show/:id', to: 'games#show'
+        post 'create', to: 'games#create'
+        put 'update/:id', to: 'games#update'
+        delete 'delete/:id', to: 'games#delete'
       end
     end
   end

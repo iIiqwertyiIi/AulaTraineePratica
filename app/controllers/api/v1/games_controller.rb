@@ -10,4 +10,39 @@ class Api::V1::GamesController < ApplicationController
     rescue StandardError
         head(:not_found)
     end
+
+    def create
+        game = Game.new(game_params)
+        game.save!
+        render json: game, status: :created
+    rescue StandardError
+        head(:unprocessable_entity)
+    end
+
+    def update
+        game = Game.find(params[:id])
+        game.update!(game_params)
+        render json: game, status: :ok
+    rescue StandardError
+        head(:unprocessable_entity)
+    end
+
+    def delete
+        game = Game.find(params[:id])
+        game.destroy!
+        render json: game, status: :ok
+    rescue StandardError
+        head(:not_found)
+    end
+
+    private
+
+    def game_params
+        params.require(:game).permit(
+            :title,
+            :genre,
+            :platform,
+            :release
+        )
+    end
 end
