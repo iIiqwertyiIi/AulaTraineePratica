@@ -1,6 +1,6 @@
 class Game < ApplicationRecord
     validates :title, :genre, :platform, :release, presence: true
-    validates :title, uniqueness: true
+    validates :title, uniqueness: true, length: { minimum: 3 }
     validates_date :release, on_or_before: lambda { Date.current }
 
     has_many :expansions
