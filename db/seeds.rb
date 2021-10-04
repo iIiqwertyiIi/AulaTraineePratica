@@ -7,5 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do |i|
-    Game.create(title: Faker::Game.unique.title, genre: Faker::Game.genre, platform: Faker::Game.platform, release: Faker::Date.backward(days: 10000))
+    g = Game.create(title: Faker::Game.unique.title, genre: Faker::Game.genre, platform: Faker::Game.platform, release: Faker::Date.backward(days: 10000))
+    g.photo.attach(io: File.open('./public/img.jpg'), filename: 'img.jpg')
 end
