@@ -42,7 +42,9 @@ class Api::V1::GamesController < ApplicationController
             :title,
             :genre,
             :platform,
-            :release
+            :release,
+            :photo,
+            images: []
         )
     end
 end
