@@ -89,4 +89,4 @@ rfactor = Game.create(title: 'rFactor', genre: 'Corrida', platform: 'Windows', r
 rfactor.photo.attach(io: rf_file, filename: rf_filename)
 
 
-Category.create([{name: 'Corrida'}, {name: 'Ritmo'}, {name: 'Romance Visual'}, {name: 'Terror', {name: 'Música'}, {name: 'Quebra-cabeça'}, {name: 'Arcade'}, {name: 'Estratégia'}])
+Category.create([{name: 'Corrida'}, {name: 'Ritmo'}, {name: 'Romance Visual'}, {name: 'Terror'}, {name: 'Música'}, {name: 'Quebra-cabeça'}, {name: 'Arcade'}, {name: 'Estratégia'}])
