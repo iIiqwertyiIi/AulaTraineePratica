@@ -49,3 +49,5 @@ gem 'active_model_serializers'
 
 gem 'devise'
 gem 'simple_token_authentication'
+
+gem 'uri'

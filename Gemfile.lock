@@ -187,6 +187,7 @@ GEM
     timeliness (0.4.4)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    uri (0.11.0)
     validates_timeliness (5.0.0)
       timeliness (>= 0.3.10, < 1)
     warden (1.2.9)
@@ -214,6 +215,7 @@ DEPENDENCIES
   simple_token_authentication
   spring
   tzinfo-data
+  uri
   validates_timeliness
 
 RUBY VERSION
