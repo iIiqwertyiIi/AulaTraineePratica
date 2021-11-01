@@ -87,3 +87,5 @@ rf_file = URI.open(rf_url)
 
 rfactor = Game.create(title: 'rFactor', genre: 'Corrida', platform: 'Windows', release: '2005-08-31')
 rfactor.photo.attach(io: rf_file, filename: rf_filename)
+
+Category.create([{name: 'Corrida'}, {name: 'Ritmo'}, {name: 'Romance Visual'}, {name: 'Terror'}, {name: 'Música'}, {name: 'Quebra-cabeça'}, {name: 'Arcade'}, {name: 'Estratégia'}])

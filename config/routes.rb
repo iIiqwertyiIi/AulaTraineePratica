@@ -10,6 +10,11 @@ Rails.application.routes.draw do
         put 'update/:id', to: 'games#update'
         delete 'delete/:id', to: 'games#delete'
       end
+
+      scope 'categories' do
+        get 'index', to: 'categories#index'
+        post 'create', to: 'categories#create'
+      end
     end
   end
 end
